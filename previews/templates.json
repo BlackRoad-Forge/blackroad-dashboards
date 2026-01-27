@@ -350,6 +350,16 @@
 }
 ,
 {
+  "name": "cicd-pipeline",
+  "file": "cicd-pipeline.sh",
+  "description": "BlackRoad OS - CI/CD Pipeline Visualizer Track build pipelines, deployments, and release automation Colors ",
+  "category": "general",
+  "interactive": true,
+  "has_sound": false,
+  "has_api": true
+}
+,
+{
   "name": "consciousness-upload",
   "file": "consciousness-upload.sh",
   "description": "",
@@ -650,6 +660,16 @@
 }
 ,
 {
+  "name": "git-activity",
+  "file": "git-activity.sh",
+  "description": "BlackRoad OS - Git Activity Dashboard Track repository activity, commits, contributors, and code changes Colors ",
+  "category": "general",
+  "interactive": true,
+  "has_sound": false,
+  "has_api": false
+}
+,
+{
   "name": "github-repo-network",
   "file": "github-repo-network.sh",
   "description": "GitHub Repository Network - FULL READ/WRITE ACCESS Access ALL repos across ALL orgs in ANY session Color definitions ",
@@ -810,6 +830,16 @@
 }
 ,
 {
+  "name": "message-queue",
+  "file": "message-queue.sh",
+  "description": "BlackRoad OS - Message Queue Dashboard Monitor RabbitMQ/Kafka message queues with throughput and consumer metrics Colors ",
+  "category": "infrastructure",
+  "interactive": true,
+  "has_sound": false,
+  "has_api": false
+}
+,
+{
   "name": "model-training",
   "file": "model-training.sh",
   "description": "BlackRoad OS - AI Model Training Dashboard Real-time ML model training metrics, loss curves, and performance Colors ",
@@ -853,6 +883,16 @@
   "name": "network-topology-3d",
   "file": "network-topology-3d.sh",
   "description": "BlackRoad OS - Network Topology 3D Visualizer Beautiful ASCII 3D network map of entire infrastructure ",
+  "category": "infrastructure",
+  "interactive": true,
+  "has_sound": false,
+  "has_api": false
+}
+,
+{
+  "name": "network-topology",
+  "file": "network-topology.sh",
+  "description": "BlackRoad OS - Network Topology Visualizer Visualize network structure, connections, and traffic flow Colors ",
   "category": "infrastructure",
   "interactive": true,
   "has_sound": false,
@@ -1010,6 +1050,16 @@
 }
 ,
 {
+  "name": "redis-monitor",
+  "file": "redis-monitor.sh",
+  "description": "BlackRoad OS - Redis Cache Monitor Real-time Redis monitoring with commands, memory, and performance Colors ",
+  "category": "monitoring",
+  "interactive": true,
+  "has_sound": false,
+  "has_api": false
+}
+,
+{
   "name": "responsive-layout",
   "file": "responsive-layout.sh",
   "description": "BlackRoad OS - Responsive Layout System Auto-adjust dashboard layout based on terminal size Get terminal dimensions Determine layout mode based on screen size ",
@@ -1017,6 +1067,16 @@
   "interactive": true,
   "has_sound": false,
   "has_api": true
+}
+,
+{
+  "name": "sales-dashboard",
+  "file": "sales-dashboard.sh",
+  "description": "BlackRoad OS - Sales Dashboard Track sales metrics, pipeline, targets, and revenue Colors ",
+  "category": "monitoring",
+  "interactive": true,
+  "has_sound": false,
+  "has_api": false
 }
 ,
 {
@@ -1077,6 +1137,16 @@
   "interactive": false,
   "has_sound": false,
   "has_api": false
+}
+,
+{
+  "name": "sla-monitor",
+  "file": "sla-monitor.sh",
+  "description": "BlackRoad OS - SLA Monitor Track service level agreements, uptime, and performance targets Colors ",
+  "category": "monitoring",
+  "interactive": true,
+  "has_sound": false,
+  "has_api": true
 }
 ,
 {
