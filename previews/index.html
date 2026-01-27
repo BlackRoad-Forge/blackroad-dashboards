@@ -399,7 +399,7 @@
 <body>
     <div class="header">
         <h1>👻 BLACKROAD OS Dashboards</h1>
-        <p>Browse 115+ beautiful terminal dashboards • Click to preview</p>
+        <p>Browse 117 beautiful terminal dashboards • Click to preview</p>
     </div>
 
     <div class="controls">
@@ -480,7 +480,12 @@
 
         // Load templates data
         fetch('templates.json')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load templates');
+                }
+                return response.json();
+            })
             .then(data => {
                 templates = data;
                 renderTemplates();
@@ -488,6 +493,9 @@
             })
             .catch(error => {
                 console.error('Error loading templates:', error);
+                document.getElementById('templatesGrid').innerHTML = 
+                    '<div style="text-align: center; color: var(--pink); padding: 2rem;">' +
+                    '⚠️ Failed to load templates. Please ensure templates.json is available.</div>';
             });
 
         function renderTemplates() {
@@ -592,7 +600,22 @@
 
         function launchDashboard() {
             if (selectedTemplate) {
-                alert(`To launch this dashboard, run:\n\n./${selectedTemplate.name}.sh`);
+                // Copy to clipboard
+                const command = `./${selectedTemplate.name}.sh`;
+                navigator.clipboard.writeText(command).then(() => {
+                    // Show success message
+                    const btn = document.querySelector('.btn-primary');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '✓ Command copied!';
+                    btn.style.background = 'linear-gradient(135deg, #14f195, #00d4ff)';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = 'linear-gradient(135deg, var(--purple), var(--pink))';
+                    }, 2000);
+                }).catch(() => {
+                    // Fallback to alert if clipboard not available
+                    alert(`To launch this dashboard, run:\n\n./${selectedTemplate.name}.sh`);
+                });
             }
         }
 

@@ -46,7 +46,7 @@ echo -e "  ${PURPLE}7)${RESET} ${BOLD}Beautiful OS Edition${RESET} ${PINK}✨${R
 echo -e "     ${TEXT_MUTED}Cards • Buttons • Modern UI design${RESET}"
 echo ""
 echo -e "  ${CYAN}8)${RESET} ${BOLD}Browse All Templates${RESET} ${ORANGE}🌐${RESET}"
-echo -e "     ${TEXT_MUTED}Visual preview browser for 115+ dashboards${RESET}"
+echo -e "     ${TEXT_MUTED}Visual preview browser for 117 dashboards${RESET}"
 echo ""
 echo -e "${PINK}─────────────────────────────────────────────────────────────────────────${RESET}"
 echo ""
@@ -215,7 +215,7 @@ case $choice in
     8)
         echo ""
         echo -e "${BLUE}Opening Template Browser...${RESET}"
-        echo -e "${TEXT_MUTED}Browse all 115+ dashboard templates with visual previews${RESET}"
+        echo -e "${TEXT_MUTED}Browse all 117 dashboard templates with visual previews${RESET}"
         sleep 1
         ./preview-browser.sh
         ;;
