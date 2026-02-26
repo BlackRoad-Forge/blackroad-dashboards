@@ -2,6 +2,65 @@
 
 A collection of 149+ beautiful terminal dashboards for monitoring BlackRoad infrastructure, IoT devices, gaming servers, and more!
 
+## 🌐 NEW: Web Integration - Use on ANY Website!
+
+BlackRoad Dashboards can now be embedded into any website as beautiful, interactive web components!
+
+![Web Dashboard Demo](https://github.com/user-attachments/assets/cc439b05-8ac9-41f2-86ae-65cd72d3e2cb)
+
+### Quick Start for Web
+
+```html
+<!-- Include CSS and JS -->
+<link rel="stylesheet" href="dashboard-core.css">
+<script src="dashboard-core.js"></script>
+<script src="system-dashboard.js"></script>
+
+<!-- Add container -->
+<div id="my-dashboard"></div>
+
+<!-- Initialize -->
+<script>
+  new SystemDashboard('my-dashboard', {
+    refreshInterval: 5000,
+    theme: 'dark'
+  }).start();
+</script>
+```
+
+### WordPress Integration
+
+Install the BlackRoad Dashboards WordPress plugin and use shortcodes:
+
+```
+[blackroad_dashboard type="system" refresh="3000" theme="dark"]
+[blackroad_dashboard type="kubernetes" controls="true"]
+[blackroad_dashboard type="crypto" height="600px"]
+```
+
+### Features
+- 🎨 **Beautiful Design** - BlackRoad OS aesthetic with dark/light themes
+- 🔄 **Auto-Refresh** - Real-time updates with configurable intervals
+- 📱 **Responsive** - Works on desktop, tablet, and mobile
+- 🎯 **Easy Integration** - Simple JavaScript API
+- ⚡ **Lightweight** - No heavy dependencies
+- 🔧 **Customizable** - Theme, colors, refresh rate
+
+### Available for Web
+- ✅ System Monitor - CPU, Memory, Disk, Network
+- ✅ Kubernetes Cluster - Pods, Nodes, Services  
+- ✅ Docker Containers - Resource usage, networks
+- ✅ Database Monitors - PostgreSQL, MongoDB, Redis
+- ✅ API Monitor - Endpoint health, response times
+- ✅ Security Dashboard - Firewall, IDS, alerts
+- ✅ IoT Devices - Smart home monitoring
+- ✅ Crypto Portfolio - DeFi, NFTs, tokens
+- ✅ And 140+ more dashboards!
+
+📖 **Full Documentation:** See `web-dashboards/README.md` for complete web integration guide
+
+---
+
 ## 🎨 Dashboards
 
 ### 1. **blackroad-dashboard.sh** - Basic Dashboard

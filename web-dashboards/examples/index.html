@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackRoad Dashboards - Web Demo</title>
+    <link rel="stylesheet" href="dashboard-core.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a12;
+            color: white;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #f7931a, #e91e8c, #9945ff, #14f195);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+        }
+
+        .demo-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .demo-section {
+            margin-bottom: 2rem;
+        }
+
+        .demo-section h2 {
+            color: #f7931a;
+            margin-bottom: 1rem;
+        }
+
+        .embed-code {
+            background: #1a1a2e;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .embed-code pre {
+            margin: 0;
+            color: #14f195;
+            overflow-x: auto;
+        }
+
+        .dashboard-container {
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1>BlackRoad Dashboards for Web</h1>
+        <p>Embed powerful terminal-style dashboards into any website</p>
+    </div>
+
+    <div class="demo-grid">
+        <div class="demo-section">
+            <h2>System Monitoring Dashboard</h2>
+            <p>Real-time system metrics with auto-refresh</p>
+            
+            <div class="embed-code">
+                <pre>&lt;div id="system-dashboard"&gt;&lt;/div&gt;
+&lt;script src="dashboard-core.js"&gt;&lt;/script&gt;
+&lt;script src="system-dashboard.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  new SystemDashboard('system-dashboard', {
+    refreshInterval: 3000,
+    theme: 'dark'
+  }).start();
+&lt;/script&gt;</pre>
+            </div>
+
+            <div id="system-dashboard" class="dashboard-container"></div>
+        </div>
+
+        <div class="demo-section">
+            <h2>How to Use</h2>
+            <div class="embed-code">
+                <pre>1. Include the CSS: &lt;link rel="stylesheet" href="dashboard-core.css"&gt;
+2. Include the JavaScript: &lt;script src="dashboard-core.js"&gt;&lt;/script&gt;
+3. Include specific dashboard: &lt;script src="system-dashboard.js"&gt;&lt;/script&gt;
+4. Initialize: new SystemDashboard('container-id').start();</pre>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Available Dashboards</h2>
+            <div class="embed-code">
+                <pre>✓ System Monitor - CPU, Memory, Disk, Network
+✓ Kubernetes Cluster - Pods, Nodes, Services
+✓ Database Monitor - PostgreSQL, MongoDB, Redis
+✓ API Monitor - Endpoint health, response times
+✓ Security Dashboard - Firewall, IDS, alerts
+✓ IoT Devices - Smart home monitoring
+✓ Crypto Portfolio - DeFi, NFTs, tokens
+✓ And 140+ more dashboards!</pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard-core.js"></script>
+    <script src="system-dashboard.js"></script>
+    <script>
+        // Initialize system dashboard
+        const systemDashboard = new SystemDashboard('system-dashboard', {
+            refreshInterval: 3000,
+            theme: 'dark',
+            showControls: true
+        });
+        systemDashboard.start();
+    </script>
+</body>
+</html>
